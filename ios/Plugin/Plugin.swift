@@ -36,9 +36,9 @@ public class NativeBiometric: CAPPlugin {
         }
         
         switch context.biometryType {
-        case .touchID:
-            obj["biometryType"] = 1
         case .faceID:
+            obj["biometryType"] = 1
+        case .touchID:
             obj["biometryType"] = 2
         default:
             obj["biometryType"] = 0
