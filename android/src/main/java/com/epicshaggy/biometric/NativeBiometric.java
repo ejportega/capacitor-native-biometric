@@ -76,10 +76,10 @@ public class NativeBiometric extends Plugin {
     private SharedPreferences encryptedSharedPreferences;
 
     private int getAvailableFeature() {
-        if (getContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_FINGERPRINT)) {
-            return FINGERPRINT;
-        } if (getContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_FACE)) {
+        if (getContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_FACE)) {
             return FACE_AUTHENTICATION;
+        } if (getContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_FINGERPRINT)) {
+            return FINGERPRINT;
         } else if (getContext().getPackageManager().hasSystemFeature(PackageManager.FEATURE_IRIS)) {
             return IRIS_AUTHENTICATION;
         } else {
